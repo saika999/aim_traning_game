@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Khula", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16D9E3;
+}
+
+.link-start {
+  font-size: 1.5rem;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  transition: margin 0.5s ease-out;
+  background: linear-gradient(90deg, #5377a1 0%, #485563 100%);
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.list-time {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.btn-time,
+.btn-next {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  transition: 0.3s all;
+}
+
+.btn-time:hover,
+.btn-next:hover {
+  border: 2px solid #1f7b80;
+  color: #184f52;
+  background-color: #b1ceca;
+}
+
+.btn-size {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  transition: 0.3s all;
+}
+
+.btn-size:hover,
+.btn-size_active {
+  border: 2px solid #1f7b80;
+  color: #184f52;
+  background-color: #b1ceca;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.primary {
+  color: #16D9E3;
+}
+
+.game-header {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+.board {
+  position: relative;
+  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: width 0.3s ease, height 0.3s ease;
+  width: 500px;
+  height: 500px;
+}
+
+.circle {
+  background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-container {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 500px;
+  margin: 50px 0;
+}
+
+.range-val {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #16D9E3;
+}
+
+.range-container div {
+  width: 100%;
+}
+
+.range-inpt {
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #16D9E3 0%, #16D9E3 50%, #485563 50%, #485563 100%);
+  outline: none;
+  cursor: pointer;
+}
+
+.range-inpt::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #16D9E3;
+  box-shadow: 0 0 6px rgba(22, 217, 227, 0.7);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.range-inpt::-webkit-slider-thumb:hover {
+  background: #30C7EC;
+}
+
+.range-inpt::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #16D9E3;
+  box-shadow: 0 0 6px rgba(22, 217, 227, 0.7);
+  cursor: pointer;
+  border: none;
+}
+
+.range-inpt::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #485563;
+}/*# sourceMappingURL=main.css.map */

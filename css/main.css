@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -28,6 +29,15 @@ a:hover {
 h1 {
   line-height: 1.4;
   font-size: 4rem;
+}
+
+.title_1 {
+  font-size: 36px;
+}
+
+.header {
+  padding: 30px 0;
+  background: linear-gradient(90deg, #415d7e 0%, #2b333b 100%);
 }
 
 .screen {
@@ -186,4 +196,38 @@ h1 {
   height: 6px;
   border-radius: 3px;
   background: #485563;
+}
+
+.btn-results,
+.btn-restart {
+  padding: 8px 22px;
+  background: #718ba4;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: 0.6px;
+  border: none;
+  border-radius: 10px;
+  max-width: 230px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+}
+
+.results__list {
+  list-style: none;
+  padding-left: 0;
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+.results__item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fff;
+  padding: 5px 10px;
 }/*# sourceMappingURL=main.css.map */

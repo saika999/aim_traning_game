@@ -80,6 +80,7 @@ function finishGame() {
     board.innerHTML = `
         <h1>Счёт: <span class="primary">${score}</span></h1>
         <button id="restart" class="btn-restart">Играть заново</button>
+        <button id="results" class="btn-results">Смотреть результаты</button>
     `;
     saveResult(score, game_time);
 }

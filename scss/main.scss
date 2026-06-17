@@ -233,3 +233,22 @@ h1 {
     border: 1px solid #fff;
     padding: 5px 10px;
 }
+
+// ----------------------------- 12.06.2026 -----------------------
+
+.results__table {
+    margin-bottom: 50px;
+}
+
+td, th{
+    border: 1px solid #ccc; 
+    padding: 6px 16px;
+}
+table {
+    border-collapse: collapse;
+     width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}

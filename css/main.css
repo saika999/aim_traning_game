@@ -230,4 +230,22 @@ h1 {
   justify-content: space-between;
   border: 1px solid #fff;
   padding: 5px 10px;
+}
+
+.results__table {
+  margin-bottom: 50px;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 6px 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

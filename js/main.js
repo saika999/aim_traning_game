@@ -83,6 +83,10 @@ function finishGame() {
         <button id="results" class="btn-results">Смотреть результаты</button>
     `;
     saveResult(score, game_time);
+
+    document.getElementById('results').addEventListener('click', () => {
+        window.location.href = './results.html';
+    });
 }
 
 function decreaseTime() {

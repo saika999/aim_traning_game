@@ -208,6 +208,7 @@ h1 {
   border: none;
   border-radius: 10px;
   max-width: 230px;
+  margin-bottom: 20px;
 }
 
 .board {
@@ -236,7 +237,8 @@ h1 {
   margin-bottom: 50px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #ccc;
   padding: 6px 16px;
 }

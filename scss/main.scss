@@ -211,6 +211,7 @@ h1 {
     border: none;
     border-radius: 10px;
     max-width: 230px;
+    margin-bottom: 20px;
 }
 
 .board {
@@ -227,6 +228,7 @@ h1 {
     width: 600px;
     margin-bottom: 40px;
 }
+
 .results__item {
     display: flex;
     justify-content: space-between;
@@ -240,13 +242,15 @@ h1 {
     margin-bottom: 50px;
 }
 
-td, th{
-    border: 1px solid #ccc; 
+td,
+th {
+    border: 1px solid #ccc;
     padding: 6px 16px;
 }
+
 table {
     border-collapse: collapse;
-     width: 100%;
+    width: 100%;
 }
 
 .btn {

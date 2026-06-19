@@ -1,29 +1,4 @@
-// const listResults = document.getElementById('results-list');
-// const btnGetResults = document.getElementById('results');
-
-// function getResults() {
-//     return JSON.parse(localStorage.getItem('results')) || [];
-// }
-
-// function renderResults() {
-//     const results = getResults();
-//     listResults.innerHTML = '';
-
-//     results.forEach((result, index) => {
-//         const li = document.createElement('li');
-//         li.innerHTML = `
-//             <span class="name">${result.game}</span>
-//             <span>${result.score}</span>           
-//             <span>${result.game_time}</span>           
-//         `;
-//         li.classList.add('results__item');
-//         listResults.appendChild(li);
-//     });
-// }
-
-// btnGetResults.addEventListener('click', renderResults);
-
-
+'use strict';
 // ---------------------------- ДЗ ----------------------------
 
 // 1. Если в локалстор ничего нет, то есть массив пустой, то на єкран вівести сообщение
@@ -32,29 +7,25 @@
 // 2. Привязать создание таблицы к кнопке , которая нахождится на главной странице. При нажатии мы долны перейти на страницу
 //    results.html и увидеть там таблицу результатов.
 
+
+
 const resultTable = document.getElementById('screen-result');
-const btnGetResults = document.getElementById('results');
+const btnClearResults = document.getElementById('clearBtn');
 
 function getResults() {
     return JSON.parse(localStorage.getItem('results')) || [];
-}
-
-function createButtonNewGame() {
-    const btn = document.createElement('button');
-    btn.textContent = 'Играть снова';
-    btn.classList.add('btn', 'btn-newgame');
-    btn.setAttribute('id', 'new-game');
-    return btn;
 }
 
 function renderResults() {
     const results = getResults();
 
     if (results.length === 0) {
-        resultTable.innerHTML = 'Результатов пока что нет';
+        resultTable.innerHTML = '<p class="no-results">Результатов пока что нет</p>';
+        return; 
     }
+
     let table = `
-        <table>
+        <table id="tableResults">
             <thead>
                 <tr>
                     <th>Игра</th>
@@ -63,7 +34,9 @@ function renderResults() {
                     <th>Дата</th>
                 </tr>
             </thead>
+            <tbody>
     `;
+
     results.forEach((result) => {
         table += `
             <tr>
@@ -74,12 +47,23 @@ function renderResults() {
             </tr>
         `;
     });
-    table += '</table>';
-    resultTable.innerHTML = table;
+
+    table += '</tbody></table>';
+    resultTable.innerHTML = table; 
 }
-btnGetResults.addEventListener('click', (renderResults));
+
+function clearResults() {
+    localStorage.removeItem('results');
+    renderResults(); 
+}
 
 
-// 1. Добавить кнопку "Играть снова" в функцию renderResults , 
-// 2. Добавить код который при надатии на кнопку "Играть снова" будет перекидывть нас на 
+renderResults();
+
+btnClearResults.addEventListener('click', clearResults);
+
+//----------------------------- ДЗ ---------------------------
+// 3. доделать кнопку clearResults, что бы не было ошибок, что бы чистилась таблица не только локал стор
+// 1. Добавить кнопку "Играть снова" в функцию renderResults ,
+// 2. Добавить код который при надатии на кнопку "Играть снова" будет перекидывть нас на
 // страницу index.html

@@ -250,4 +250,23 @@ table {
 
 .btn {
   cursor: pointer;
+}
+
+.heading {
+  flex-basis: 120px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inpt-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: -43px;
+  margin-bottom: 50px;
+}
+.inpt-group label {
+  font-size: 21px;
+}
+.inpt-group input {
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */

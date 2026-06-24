@@ -10,22 +10,36 @@
         <main class="main">
 
             <section class="screen">
-                <h1 class="title_1">Aim Training</h1>
+                <div class="heading">
+                    <h1 class="title_1">Aim Training</h1>
+                </div>
+                <div class="inpt-group">
+                    <label for='inpt-nickname'>Введите ваш никнейм</label>
+                    <input type="text" id="inpt-nickname">
+                </div>
+
                 <a href="#" class="link-start" id="start">Начать игру</a>
             </section>
 
             <section class="screen">
                 <h1 class="title_1">Выберите Размер</h1>
                 <ul class="list-time" id="size_list">
-                    <li><button class="btn-size" data-width="300" data-height="300">Маленький<br><small>300×300</small></button></li>
-                    <li><button class="btn-size" data-width="500" data-height="500">Средний<br><small>500×500</small></button></li>
-                    <li><button class="btn-size" data-width="700" data-height="700">Большой<br><small>700×700</small></button></li>
-                    <li><button class="btn-size" data-width="1200" data-height="800">Супер Большой<br><small>1200×800</small></button></li>
+                    <li><button class="btn-size" data-width="300"
+                            data-height="300">Маленький<br><small>300×300</small></button></li>
+                    <li><button class="btn-size" data-width="500"
+                            data-height="500">Средний<br><small>500×500</small></button></li>
+                    <li><button class="btn-size" data-width="700"
+                            data-height="700">Большой<br><small>700×700</small></button></li>
+                    <li><button class="btn-size" data-width="1200"
+                            data-height="800">Супер
+                            Большой<br><small>1200×800</small></button></li>
                 </ul>
                 <div class="range-container">
-                    <label for="range-input">Выберите значение в мс для автоигры:</label>
+                    <label for="range-input">Выберите значение в мс для
+                        автоигры:</label>
                     <div>
-                        <input class="range-inpt" type="range" id="range-input" min="0" max="1000" value="500">
+                        <input class="range-inpt" type="range" id="range-input"
+                            min="0" max="1000" value="500">
                         <span class="range-val" id="range-value">500ms</span>
                     </div>
                 </div>
@@ -35,11 +49,18 @@
             <section class="screen">
                 <h1 class="title_1">Выберите Время</h1>
                 <ul class="list-time" id="time_list">
-                    <li><button class="btn-time" data-time="5">5 сек</button></li>
-                    <li><button class="btn-time" data-time="10">10 сек</button></li>
-                    <li><button class="btn-time" data-time="20">20 сек</button></li>
-                    <li><button class="btn-time" data-time="40">40 сек</button></li>
-                    <li><button class="btn-time" data-time="60">60 сек</button></li>
+                    <li><button class="btn-time" data-time="1">1
+                            сек</button></li>
+                    <li><button class="btn-time" data-time="5">5
+                            сек</button></li>
+                    <li><button class="btn-time" data-time="10">10
+                            сек</button></li>
+                    <li><button class="btn-time" data-time="20">20
+                            сек</button></li>
+                    <li><button class="btn-time" data-time="40">40
+                            сек</button></li>
+                    <li><button class="btn-time" data-time="60">60
+                            сек</button></li>
                 </ul>
             </section>
 

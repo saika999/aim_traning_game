@@ -21,14 +21,15 @@ function renderResults() {
 
     if (results.length === 0) {
         resultTable.innerHTML = '<p class="no-results">Результатов пока что нет</p>';
-        return; 
+        return;
     }
 
     let table = `
         <table id="tableResults">
             <thead>
                 <tr>
-                    <th>Игра</th>
+                    <th>№</th>
+                    <th>Никнейм</th>
                     <th>Счёт</th>
                     <th>Время</th>
                     <th>Дата</th>
@@ -41,6 +42,7 @@ function renderResults() {
         table += `
             <tr>
                 <td>${result.game}</td>
+                <td>${result.nickname}</td>
                 <td>${result.score}</td>
                 <td>${result.game_time}</td>
                 <td>${result.date}</td>
@@ -49,21 +51,25 @@ function renderResults() {
     });
 
     table += '</tbody></table>';
-    resultTable.innerHTML = table; 
+    resultTable.innerHTML = table;
 }
 
 function clearResults() {
     localStorage.removeItem('results');
-    renderResults(); 
+    renderResults();
 }
+document.getElementById('btnPlayAgain').addEventListener('click', () => {
+    window.location.href = './index.html';
+})
 
 
 renderResults();
 
 btnClearResults.addEventListener('click', clearResults);
 
+
 //----------------------------- ДЗ ---------------------------
-// 3. доделать кнопку clearResults, что бы не было ошибок, что бы чистилась таблица не только локал стор
-// 1. Добавить кнопку "Играть снова" в функцию renderResults ,
-// 2. Добавить код который при надатии на кнопку "Играть снова" будет перекидывть нас на
-// страницу index.html
+// Используя наши наработки на уроке. Добавить :
+// 1.Проверку наличия никнейма, при нажатии на кнопку "Начать игру" 
+// длинна никнейма должна быть не менее 2 символов
+// 2. Добивть никнейм в таблицу

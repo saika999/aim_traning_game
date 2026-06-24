@@ -256,3 +256,27 @@ table {
 .btn {
     cursor: pointer;
 }
+
+// ----------------------- 19.06.2026 ---------------------
+.heading {
+    flex-basis: 120px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inpt-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: -43px;
+    margin-bottom: 50px;
+
+
+
+    & label {
+        font-size: 21px;
+    }
+
+    & input {
+        font-size: 20px;
+    }
+}

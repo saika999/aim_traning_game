@@ -1,6 +1,6 @@
 'use strict';
 
-export function saveResult(score, game_time) {
+export function saveResult(score, game_time, nickname) {
     let results = [];
     try {
         const raw = localStorage.getItem('results');
@@ -10,6 +10,7 @@ export function saveResult(score, game_time) {
     }
     results.push({
         game: results.length + 1,
+        nickname: nickname,
         score: score,
         game_time: `${game_time} sec`,
         date: new Date().toLocaleString()

@@ -11,6 +11,8 @@ const btnNext = document.querySelector('#btn_next');
 const timeCounter = document.querySelector('#time');
 const inputRange = document.getElementById('range-input');
 const board = document.querySelector('#board');
+const inptNickname = document.getElementById('inpt-nickname');
+
 
 const COLORS = ['#15e943', '#f31212', '#12c3f0', '#f3e51e', '#e914a9'];
 
@@ -20,10 +22,28 @@ let autoClickInterval = null;
 let timerInterval = null;
 let game_time = 0;
 
+
+let nickname = '';
+
 range();
+
 
 btnStart.addEventListener('click', (e) => {
     e.preventDefault();
+
+    const nicknameValue = inptNickname.value.trim();
+
+    if (nicknameValue.length < 2) {
+        inptNickname.style.border = '2px solid red';
+        inptNickname.placeholder = 'Минимум 2 символа!';
+        inptNickname.value = '';
+        return;
+    }
+
+  
+    nickname = nicknameValue;
+
+    inptNickname.style.border = '';
     allScreens[0].classList.add('up');
 });
 
@@ -70,7 +90,6 @@ board.addEventListener('click', (e) => {
 function startGame() {
     createRandomCircle();
     timerInterval = setInterval(decreaseTime, 1000);
-    // if (parseInt(inputRange.value) > 0) winGame();
 }
 
 function finishGame() {
@@ -82,7 +101,9 @@ function finishGame() {
         <button id="restart" class="btn-restart">Играть заново</button>
         <button id="results" class="btn-results">Смотреть результаты</button>
     `;
-    saveResult(score, game_time);
+
+    
+    saveResult(score, game_time, nickname);
 
     document.getElementById('results').addEventListener('click', () => {
         window.location.href = './results.html';
